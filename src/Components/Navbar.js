@@ -1,0 +1,43 @@
+import '../css/navbar.css'
+import {useEffect} from 'react'
+import { Link } from 'react-router-dom'
+import M from "materialize-css/dist/js/materialize.min.js"
+
+function Navbar() {
+    useEffect(() => {
+        let sidenav = document.querySelector("#mobile-links");
+        M.Sidenav.init(sidenav, {});
+    }, []);
+
+    return (
+        <>
+            <div className="navbar-fixed">
+                <nav className="nav-wrapper indigo">
+                    <div className="container">
+                        <Link to='/' className="brand-logo">Code With Anki</Link>
+                        <a href="#" className="sidenav-trigger" data-target="mobile-links">
+                            <i className="material-icons">menu</i>
+                        </a>
+                        <ul className="right hide-on-med-and-down">
+                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/about'>About</Link></li>
+                            <li><Link to='/contact'>Contact</Link></li>
+                            <li><Link to='/notification' className="btn-floating z-depth-0 indigo darken-4">
+                                <i className="material-icons">notifications</i>
+                            </Link></li>
+                            <li><span className="badge white-text new pink">0</span></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <ul className="sidenav" id="mobile-links">
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/about'>About</Link></li>
+                <li><Link to='/contact'>Contact</Link></li>
+            </ul>
+        </>
+    );
+}
+
+export default Navbar;
