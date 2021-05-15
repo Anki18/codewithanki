@@ -7,7 +7,6 @@ const onSidenavClose = () => {
     const elem = document.querySelector(".sidenav");
     const instance = M.Sidenav.getInstance(elem);
     if (instance.isOpen) {
-        console.log("Is open: I need to close it");
         instance.close();
       }
 }
