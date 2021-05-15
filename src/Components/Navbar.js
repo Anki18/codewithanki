@@ -3,7 +3,16 @@ import {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import M from "materialize-css/dist/js/materialize.min.js"
 
-function Navbar() {
+const onSidenavClose = () => {
+    const elem = document.querySelector(".sidenav");
+    const instance = M.Sidenav.getInstance(elem);
+    if (instance.isOpen) {
+        console.log("Is open: I need to close it");
+        instance.close();
+      }
+}
+
+const Navbar = () => {
     useEffect(() => {
         let sidenav = document.querySelector("#mobile-links");
         M.Sidenav.init(sidenav, {});
@@ -32,6 +41,7 @@ function Navbar() {
             </div>
 
             <ul className="sidenav" id="mobile-links">
+                <li ><Link onClick={onSidenavClose}><i className="material-icons right">close</i></Link></li>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/about'>About</Link></li>
                 <li><Link to='/contact'>Contact</Link></li>
