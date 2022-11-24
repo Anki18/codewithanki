@@ -8,9 +8,9 @@ const About = () => {
         <div className="flow-text">
           <span>
             I am Full Stack Developer with 7.3+ years of experience in creating and delivering
-            user-centric applications and solutions.<br />
+            user-centric applications and solutions.<br /><br />
             Throughout my career, I have been acknowledged as a solution-focused professional with
-            the ability to design and develop innovative applications using advanced technologies.<br />
+            the ability to design and develop innovative applications using advanced technologies.<br /><br />
             I collaborate closely with the application team to develop and implement stories for our web applications,
             ensuring optimal functionality, quality, and reliability. Please consider the following highlights of my career : <br />
             <ul>
@@ -23,14 +23,13 @@ const About = () => {
           <div>
             <hr /> <h5>Technology Stack</h5> <hr />
             <ul>
-              <li>C#</li>
-              <li>Asp.Net Web Api</li>
-              <li>Asp.Net MVC</li>
-              <li>Asp.Net Core</li>
-              <li>SQL Server</li>
-              <li>JavaScript</li>
-              <li>React JS</li>
-              <li>Firebase</li>
+              <li>•	C#</li>
+              <li>•	Asp.Net Web Api</li>
+              <li>•	Asp.Net MVC</li>
+              <li>•	Asp.Net Core</li>
+              <li>•	SQL Server</li>
+              <li>•	JavaScript</li>
+              <li>•	React JS</li>
             </ul>
           </div>
         </div>
